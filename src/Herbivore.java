@@ -1,6 +1,6 @@
 public class Herbivore extends Creature {
     public Herbivore(nMap nMap, Coordinates coordinates){
-        super(nMap,1,7,coordinates);
+        super(nMap,16,coordinates);
     }
 
     public boolean isTarget(Entity entityAtLocation) {

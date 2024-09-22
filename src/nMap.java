@@ -2,8 +2,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class nMap {
-    private final static int HEIGHT = 25;
-    private final static int WIDTH = 25;
+    private final static int HEIGHT = 15;
+    private final static int WIDTH = 20;
     private HashMap<Coordinates, Entity> map = new HashMap<>();
 
     public nMap(){}

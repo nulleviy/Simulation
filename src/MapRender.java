@@ -10,8 +10,8 @@ public class MapRender {
     public void renderMap(nMap area) {
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        for (int x = 0; x < area.getHeight(); x++) {
-            for (int y = 0; y < area.getWidth(); y++) {
+        for (int x = 0; x < area.getWidth(); x++) {
+            for (int y = 0; y < area.getHeight(); y++) {
                 Coordinates coordinates = new Coordinates(x, y);
                 Entity entity = area.getEntityAtLocation(coordinates);
                 if (entity != null) {

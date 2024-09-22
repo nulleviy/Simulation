@@ -9,7 +9,7 @@ public class InitAction extends Actions {
     }
     @Override
     public void perform(){
-        setRandomEntities(4,12,15,6,5);
+        setRandomEntities(4,6,9,6,5);
     }
 
     private void setRandomEntities(int numPredators, int numHerbivores, int numGrass, int numRocks, int numTrees) {

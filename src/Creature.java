@@ -2,15 +2,13 @@ import java.util.List;
 
 public abstract class Creature extends Entity {
     protected nMap nMap;
-    private int speed;
     private int health;
-    aStar alghorithm;
-    public Creature(nMap nMap, int speed, int health, Coordinates coordinates){
+    protected aStar alghorithm;
+    public Creature(nMap nMap, int health, Coordinates coordinates){
         super(coordinates);
-        alghorithm = new aStar();
         this.nMap = nMap;
-        this.speed = speed;
         this.health = health;
+        alghorithm = new aStar();
     }
     public abstract void performAction(Coordinates coordinates);
 
@@ -20,7 +18,7 @@ public abstract class Creature extends Entity {
     public abstract boolean isTarget(Entity entityAtLocation);
     public void makeMove(){
         Coordinates currentCoordinates = getCoordinates();
-        changeHealth(-5);
+        changeHealth(-2);
         if(health<=0){
             nMap.removeEntityAtLocation(currentCoordinates);
         }

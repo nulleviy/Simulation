@@ -35,7 +35,7 @@ public class Simulation {
                  }
 
                  try {
-                     Thread.sleep(100);
+                     Thread.sleep(1000);
                  } catch (InterruptedException e) {
                      break;
                  }
@@ -60,7 +60,11 @@ public class Simulation {
                  System.exit(0);
              }
 
-             if (!area.hasGrass() || !area.hasHerbivore()) {
+             if (!area.hasGrass()){
+                 System.out.println("Победили травоядные");
+                 break;
+             }else if(!area.hasHerbivore()){
+                 System.out.println("Победили хищники");
                  break;
              }
          }

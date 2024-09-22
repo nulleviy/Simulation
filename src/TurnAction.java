@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
 public class TurnAction extends Actions{
-    private nMap area;
+    private final nMap area;
     private int turnCount;
-    private MapRender renderer;
+    private final MapRender renderer;
     private boolean isPaused;
-    private Object lock;
+    private final Object lock;
     public TurnAction(nMap area,MapRender renderer){
         this.area = area;
         this.renderer = renderer;
@@ -17,8 +17,7 @@ public class TurnAction extends Actions{
         turnCount++;
         if(!isPaused){
             for(Entity entity: new ArrayList<>(area.getEntities().values())){
-                if(entity instanceof Creature){
-                    Creature creature = (Creature) entity;
+                if(entity instanceof Creature creature){
                     creature.makeMove();
                 }
             }
